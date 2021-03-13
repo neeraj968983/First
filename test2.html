@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        sum=0;
+        document
+        function f1(item){
+            checkBox = item; 
+            if(checkBox.checked == true){
+                
+                sum = sum + Number(item.value);
+                document.getElementById("box1").value=sum;
+            }
+            else{
+                sum = sum - Number(item.value);
+                document.getElementById("box1").value=sum;
+            }
+        }
+        function f2(){
+            if(sum==0){
+                alert("You didn't buy any thing");
+            }
+            else
+            alert("Thank You for buying here\n You have to pay : "+sum);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="Book1.jpg" width="80" length="100"></td>
+            <td><img src="Book2.jpg" width="80" length="100"></td>
+            <td><img src="Book3.jpg" width="80" length="100"></td>
+            <td><img src="Book4.jpg" width="80" length="100"></td>
+        </tr>
+    </table>
+    <input type="checkbox" id ="Book1" onchange="f1(this)" value="80"> Book1 &nbsp &nbsp
+    <input type="checkbox" id ="Book2" onchange="f1(this)" value="180"> Book2 &nbsp &nbsp
+    <input type="checkbox" id ="Book3" onchange="f1(this)" value="280"> Book3 &nbsp &nbsp 
+    <input type="checkbox" id ="Book4" onchange="f1(this)" value="380"> Book4 <br><br>
+    <input type="text" id="box1" value="0" disabled>
+    <input type="button" value="Buy" onclick="f2()">
+</body>
+</html>
